@@ -6,7 +6,7 @@ int inputValue(int*);
 
 int main(void)
 {
-	int ary[3];
+	int ary[5];
 	int *p;
 	int i,cnt;
 
@@ -16,7 +16,7 @@ int main(void)
 
 	printf("配列の値：");
 
-	for(i = 0; i < 2; i++){
+	for(i = 0; i < 4; i++){
 		printf("%d,",p[i]);
 	}
 	printf("%d\n",p[i]);
@@ -30,7 +30,7 @@ int inputValue(int *p)
 {
 	int i,cnt = 0;
 
-	for(i = 0; i < 3; i++){
+	for(i = 0; i < 5; i++){
 		printf("%d番目の要素の値を入力してください：",i+1);
 		scanf("%d",&p[i]);
 		cnt += p[i];
