@@ -2,21 +2,21 @@
 /*課題名：課題07_1*/
 #include<stdio.h>
 
-int inputValue10(int*);
+int inputValue(int*);
 
 int main(void)
 {
-	int ary[10];
+	int ary[3];
 	int *p;
 	int i,cnt;
 
 	p = ary;
 
-	cnt = inputValue10(p);
+	cnt = inputValue(p);
 
 	printf("配列の値：");
 
-	for(i = 0; i < 9; i++){
+	for(i = 0; i < 2; i++){
 		printf("%d,",p[i]);
 	}
 	printf("%d\n",p[i]);
@@ -26,11 +26,11 @@ int main(void)
 	return 0;
 }
 
-int inputValue10(int *p)
+int inputValue(int *p)
 {
 	int i,cnt = 0;
 
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 3; i++){
 		printf("%d番目の要素の値を入力してください：",i+1);
 		scanf("%d",&p[i]);
 		cnt += p[i];
