@@ -10,14 +10,17 @@ int main(void)
 	int *p;
 	int i,cnt;
 
+	i = 0;
+
 	p = ary;
 
 	cnt = inputValue(p);
 
 	printf("配列の値：");
 
-	for(i = 0; i < 4; i++){
+	while(i < 4){
 		printf("%d,",p[i]);
+		i++;
 	}
 	printf("%d\n",p[i]);
 
@@ -28,12 +31,13 @@ int main(void)
 
 int inputValue(int *p)
 {
-	int i,cnt = 0;
+	int i = 0,cnt = 0;
 
-	for(i = 0; i < 5; i++){
+	while(i < 5){
 		printf("%d番目の要素の値を入力してください：",i+1);
 		scanf("%d",&p[i]);
 		cnt += p[i];
+		i++;
 	}
 	return cnt;
 }
